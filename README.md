@@ -19,11 +19,11 @@ git clone, git checkout <commit>, dvc checkout, mamba env create -f environment.
 
 Steps performed:
 
-Cloned the repository and checked out commit 7feab49 (Partner A's latest commit, containing the trained model, versioned dataset, and environment).
-Retrieved the versioned Iris dataset using dvc pull and dvc checkout.
-Recreated the exact environment using mamba env create -f environment.yml.
-Reran question_4.ipynb 
-Reproduced MLflow run: brawny-squid-212 (Run ID: 7328e02c7a02428fb32d48ff33c94456), which auto-logged a git_commit tag matching 7feab49, confirming the exact commit was used.
+* Cloned the repository and checked out commit 7feab49 (Partner A's latest commit, containing the trained model, versioned dataset, and environment).
+* Retrieved the versioned Iris dataset using dvc pull and dvc checkout.
+* Recreated the exact environment using mamba env create -f environment.yml.
+* Reran question_4.ipynb 
+* Reproduced MLflow run: brawny-squid-212 (Run ID: 7328e02c7a02428fb32d48ff33c94456), which auto-logged a git_commit tag matching 7feab49, confirming the exact commit was used.
 Results produced:
 <img width="1853" height="798" alt="MLflow_PartnerB" src="https://github.com/user-attachments/assets/7aa37f1b-58b1-49ad-a949-ef501ff831f4" />
 
