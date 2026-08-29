@@ -96,7 +96,7 @@ git commit -m "code added"
 git push
 ```
 
-## Partner B (DA24B036):
+# Partner B (DA24B036):
 I assumed the role of Partner B and reproduced Partner A's result using only the permitted commands: 
 git clone, git checkout <commit>, dvc checkout, mamba env create -f environment.yml, and rerunning the script 
 
