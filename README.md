@@ -99,7 +99,7 @@ git push
 # Partner B (DA24B036):
 I assumed the role of Partner B and reproduced Partner A's result using only the permitted commands: git clone, git checkout <commit>, dvc checkout, mamba env create -f environment.yml, and rerunning the script — with no other communication about environment or data.
 
-**Steps performed:**
+### Steps performed:
 
 ```bash
 git clone git@github.com:AnanyaKishore/q4demo.git
@@ -113,7 +113,7 @@ jupyter nbconvert --to notebook --execute question_4.ipynb --output question_4_p
 
 ```
 
-Metrics (reproduced):
+### Metrics (reproduced):
 
 | Metric          | Value                |
 |------------------|-----------------------|
@@ -123,6 +123,7 @@ Metrics (reproduced):
 | f1_macro         | 1                     |
 | log_loss         | 0.03962966788448317   |
 
+### Verification against Partner A's results:
 
 | Metric          | Partner A              | Partner B  |
 |------------------|-----------------------|--------------------|
