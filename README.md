@@ -101,6 +101,7 @@ I assumed the role of Partner B and reproduced Partner A's result using only the
 
 **Steps performed:**
 
+```bash
 git clone git@github.com:AnanyaKishore/q4demo.git
 cd q4demo
 git checkout 7feab49
@@ -109,6 +110,8 @@ dvc checkout
 mamba env create -f environment.yml
 mamba activate assignment1_env
 jupyter nbconvert --to notebook --execute question_4.ipynb --output question_4_partnerB.ipynb
+
+```
 
 Metrics (reproduced):
 
@@ -121,7 +124,7 @@ Metrics (reproduced):
 | log_loss         | 0.03962966788448317   |
 
 
-| Metric          | **Partner A  **            | **Partner B**  |
+| Metric          | Partner A              | Partner B  |
 |------------------|-----------------------|--------------------|
 | accuracy         | 1                     | 1                  |
 | precision_macro  | 1                     | 1                  |
