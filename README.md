@@ -97,15 +97,40 @@ git push
 ```
 
 # Partner B (DA24B036):
-I assumed the role of Partner B and reproduced Partner A's result using only the permitted commands: 
-git clone, git checkout <commit>, dvc checkout, mamba env create -f environment.yml, and rerunning the script 
+I assumed the role of Partner B and reproduced Partner A's result using only the permitted commands: git clone, git checkout <commit>, dvc checkout, mamba env create -f environment.yml, and rerunning the script — with no other communication about environment or data.
 
-Steps performed:
+**Steps performed:**
 
-* Cloned the repository and checked out commit 7feab49 (Partner A's latest commit, containing the trained model, versioned dataset, and environment).
-* Retrieved the versioned Iris dataset using dvc pull and dvc checkout.
-* Recreated the exact environment using mamba env create -f environment.yml.
-* Reran question_4.ipynb 
+git clone git@github.com:AnanyaKishore/q4demo.git
+cd q4demo
+git checkout 7feab49
+dvc pull
+dvc checkout
+mamba env create -f environment.yml
+mamba activate assignment1_env
+jupyter nbconvert --to notebook --execute question_4.ipynb --output question_4_partnerB.ipynb
+
+Metrics (reproduced):
+
+| Metric          | Value                |
+|------------------|-----------------------|
+| accuracy         | 1                     |
+| precision_macro  | 1                     |
+| recall_macro     | 1                     |
+| f1_macro         | 1                     |
+| log_loss         | 0.03962966788448317   |
+
+
+| Metric          | **Partner A  **            | **Partner B**  |
+|------------------|-----------------------|--------------------|
+| accuracy         | 1                     | 1                  |
+| precision_macro  | 1                     | 1                  |
+| recall_macro     | 1                     | 1                  |
+| f1_macro         | 1                     | 1                  |
+| log_loss         | 0.03962966788448317   | 0.03962966788448317 |
+
+Result: All metrics matched Partner A's logged results exactly, well within the stated tolerance (±0.001). Verification logged as a reproducibility_note tag on the reproduced MLflow run.
+
 * Reproduced MLflow run: brawny-squid-212 (Run ID: 7328e02c7a02428fb32d48ff33c94456), which auto-logged a git_commit tag matching 7feab49, confirming the exact commit was used.
 Results produced:
 <img width="1853" height="798" alt="Screenshot from 2026-08-29 21-35-11" src="https://github.com/user-attachments/assets/af667037-469b-40b7-9f89-fbebc6ab241a" />
